@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Latest Blogs</h1>
+  <div id="blogContainer"></div>
+
+  <script>
+    async function loadBlogs() {
+      const res = await fetch("http://localhost/blog_project/api.php");
+      const blogs = await res.json();
+
+      document.getElementById("blogContainer").innerHTML =
+        blogs.map(blog => `
+          <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+            <h2>${blog.title}</h2>
+            <p>${blog.content}</p>
+            <small>${blog.created_at}</small>
+          </div>
+        `).join("");
+    }
+    loadBlogs();
+  </script>
+</body>
+</html>

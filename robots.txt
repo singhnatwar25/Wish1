@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wishcowork.com/sitemap.xml
+
+# Disallow admin and temporary files
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /cgi-bin/
+Disallow: /includes/
+
+# Allow all images
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Crawl-delay: 10  # Uncomment if needed to prevent server overload

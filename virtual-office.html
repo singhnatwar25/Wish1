@@ -46,439 +46,26 @@
     </script>
     <meta name="google-site-verification" content="T5B8UvxBtc7GEkG_jUYkKekm1UqDIy3owQ6x47OYVVQ" />
     <title>WishCowork</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        /* background-color: ; */
-        font-family: "raleway";
 
-    }
-
-    .container {
-        max-width: 1140px;
-
-    }
-
-
-    .navbar {
-        transition: all 0.3s ease-in-out;
-        font-family: "raleway";
-        font-size: 16px;
-        font-weight: 500;
-        background-color: white;
-    }
-
-    .navbar.scrolled {
-        background-color: white !important;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #d4a017;
-    }
-
-    .navbar-nav .nav-link {
-        color: #030303;
-        /* font-weight: 300; */
-
-    }
-
-    .dropdown-menu {
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background: #f1f1f1;
-        font-size: 13px;
-    }
-
-
-    .dropdown-header {
-        font-size: 0.7rem;
-        color: #777;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    /* Custom Dropdown Arrow */
-    .dropdown-toggle::after {
-        content: '';
-        display: inline-block;
-        margin-left: 0.5em;
-        border: solid transparent;
-        border-width: 0.3em 0.3em 0;
-        border-top-color: currentColor;
-        /* Default down icon */
-        transition: transform 0.3s ease;
-    }
-
-    /* Rotate the arrow when hovered */
-    .dropdown:hover .dropdown-toggle::after {
-        transform: rotate(180deg);
-        /* Rotate the icon to face up */
-    }
-
-    /* Display dropdown menu on hover */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        /* Make dropdown menu visible */
-        animation: fadeIn 0.3s ease;
-        /* Optional: Add animation for dropdown */
-    }
-
-    /* Optional: Add fade-in animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Main content Css Here */
-    .CusImage {
-        height: 400px;
-        object-fit: cover;
-    }
-
-    /* 
-  .card {
-    max-height: 130px;
-  } */
-
-    .card:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border: solid 0.5px #d4a017;
-    }
-
-    .homeImage {
-        border-radius: 100px 12px 12px 12px;
-        object-fit: cover;
-    }
-
-
-    .workspace-card img {
-        border-radius: 15px;
-    }
-
-    .workspace-info {
-        border-radius: 15px;
-        background: #f8f9fa;
-        padding: 20px;
-    }
-
-    .workspace-info h5 {
-        font-weight: bold;
-    }
-
-    .workspace-info p {
-        color: #6c757d;
-    }
-
-    .workspace-info .btn {
-        font-weight: bold;
-        color: #a77716;
-    }
-
-
-    .virtualImage {
-        border-radius: 0px 60px 4px 4px;
-        object-fit: cover;
-
-    }
-
-
-    .locations {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        max-width: 500px;
-    }
-
-    .location {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        font-size: 11px;
-        font-weight: 500;
-        align-items: center;
-        justify-content: end;
-        border-radius: 50%;
-        background: #f8f9fa;
-        cursor: pointer;
-        text-align: center;
-        flex-direction: column;
-        transition: 0.3s;
-    }
-
-    .location:hover {
-        background: #c4cbe1;
-        color: #fff;
-    }
-
-    .location img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .location-card {
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        height: 200px;
-    }
-
-    .location-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .location-card:hover img {
-        transform: scale(1.05);
-    }
-
-    .location-name {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        padding: 5px 15px;
-        border-radius: 10px;
-        font-weight: bold;
-    }
-
-    .benefits-section {
-        background-color: #f8f9fa;
-        padding: 60px 0;
-        text-align: center;
-    }
-
-    .benefits-section h2 {
-        font-weight: bold;
-        position: relative;
-        display: inline-block;
-    }
-
-    .benefits-section h2::after {
-        content: "";
-        width: 50px;
-        height: 2px;
-        background-color: blue;
-        display: block;
-        margin: 5px auto 0;
-    }
-
-    .benefit-item {
-        padding: 20px;
-    }
-
-    .benefit-icon {
-        font-size: 40px;
-        color: #f9c74f;
-    }
-
-    /* Main content Css Here */
-    .footer {
-        background-color: #f7fbfc;
-
-    }
-
-    .footer a {
-        color: black;
-        text-decoration: none;
-        font-size: 11px;
-        letter-spacing: 1px;
-        font-weight: 600;
-        line-height: 16.5px;
-        transition: color 0.3s ease;
-    }
-
-    .footer a:hover {
-        color: #606060;
-
-    }
-
-    .footer .social-icons a {
-        margin: 0 10px;
-        font-size: 20px;
-    }
-</style>
 
 
 <body>
 
- <header>
-    <!-- place navbar here -->
-    <nav class="navbar navbar-expand-lg   fixed-top box-shadow ">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">WISH<Span class="text-dark">COWORK</Span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto ">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="location.html" id="locationDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = 'location.html';">Locations</a>
-              <ul class="dropdown-menu p-3" aria-labelledby="locationDropdown" style="min-width: 400px;">
-            
-                <li><a class="dropdown-header">Popular Locations</a></li>
-            
-                <div class="row">
-                  <!-- Column 1 -->
-                  <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/location/gurugram/gurugram.html">Gurugram</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/bangalore/bangalore.html">Bangalore</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/mumbai/mumbai.html">Mumbai</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/hyderabad/hyderabad.html">Hyderabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/pune/pune.html">Pune</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/delhi/delhi.html">Delhi</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/noida/noida.html">Noida</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/ahmedabad/ahmedabad.html">Ahmedabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/indore/indore.html">Indore</a></li>
-                  </div>
-            
-                  <!-- Column 2 -->
-                  <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/location/chennai/chennai.html">Chennai</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/kochi/kochi.html">Kochi</a></li>
-                    <li><a class="dropdown-item" href="location/Jaipur/jaipur.html">Jaipur</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/bhubaneswar/bhubaneswar.html">Bhubaneswar</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/coimbatore/coimbatore.html">Coimbatore</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/chandigarh/chandigarh.html">Chandigarh</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/goa/goa.html">Goa</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/kolkata/kolkata.html">Kolkata</a></li>
-                  </div>
-                </div>
-            
-                <li><a class="dropdown-item text-primary fw-bold text-center mt-2" href="location.html">View All Locations</a></li>
-              </ul>
-            </li>
-            
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="pricing.html" id="plansDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = 'pricing.html';">Plans</a>
-              <ul class="dropdown-menu" aria-labelledby="plansDropdown">
-                <li><a class="dropdown-header">Dedicated Workspaces</a></li>
-                <li><a class="dropdown-item" href="plan/private-office.html">Private Office</a></li>
-                <li><a class="dropdown-item" href="plan/dedicated.html">Dedicated Desk</a></li>
-                <li><a class="dropdown-item" href="plan/enterprise.html">Enterprises solution</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-header fw-light ">Flexible Workspaces</a></li>
-                <li><a class="dropdown-item" href="plan/coworking.html">Coworking</a></li>
-                <li><a class="dropdown-item" href="plan/meeting.html">Meeting Room</a></li>
-                <li><a class="dropdown-item" href="plan/virtual-office.html">Virtual Office</a></li>
-                <li><a class="dropdown-item" href="plan/on-the-go.html">On-the-Go</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="space.html" id="plansDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = 'bussiness-service.html';">Bussiness Service</a>
-              <ul class="dropdown-menu" aria-labelledby="plansDropdown">
-                <li><a class="dropdown-item" href="incorporation-services.html">Incorporation Services</a></li>
-                <li><a class="dropdown-item" href="tax-accounting.html">Tax and Accounting</a></li>
-                <li><a class="dropdown-item" href="delivery-courier.html">Delivery & Courier</a></li>
-                <li><a class="dropdown-item" href="other-legal-services.html">Other Legal Cervices</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="space.html" id="plansDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = 'space.html';">Space</a>
-              <ul class="dropdown-menu" aria-labelledby="plansDropdown">
-                <li><a class="dropdown-header">Functional Spaces</a></li>
-                <li><a class="dropdown-item" href="space/studio-podcast.html">studio podcast</a></li>
-                <li><a class="dropdown-item" href="space/event-space.html">Event Space</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="virtual-office.html" id="plansDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = 'virtual-office.html';">Virtual Office</a>
-              <ul class="dropdown-menu p-3" aria-labelledby="plansDropdown" style="min-width: 400px;">
-
-                <li><a class="dropdown-header">Popular Locations</a></li>
-
-                <div class="row">
-                  <!-- Column 1 -->
-                  <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-gurugram.html">Gurugram</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-bangalore.html">Bangalore</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-mumbai.html">Mumbai</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-hyderabad.html">Hyderabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-pune.html">Pune</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-delhi.html">Delhi</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-noida.html">Noida</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-ahmedabad.html">Ahmedabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-indore.html">Indore</a></li>
-                  </div>
-                
-                  <!-- Column 2 -->
-                  <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-chennai.html">Chennai</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-kochi.html">Kochi</a></li>
-                    <li><a class="dropdown-item         " href="virtual-office/virtual-space-jaipur.html">Jaipur</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-bhubaneswar.html">Bhubaneswar</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-coimbatore.html">Coimbatore</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-chandigarh.html">Chandigarh</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-goa.html">Goa</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-kolkata.html">Kolkata</a></li>
-                  </div>
-                </div>
-                
-
-                <li><a class="dropdown-item text-primary fw-bold text-center mt-2" href="virtual-office.html">View All
-                    Locations</a></li>
-              </ul>
-            </li>
-
-
-            <li class="nav-item">
-              <a class="nav-link" href="event.html">Events</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li> -->
-          </ul>
-          <div class="d-flex">
-            <a href="contact.html" class="btn btn-book-tour me-3 btn-outline-dark px-1 py-1">Book Tour</a>
-            <!-- <a href="#" class="nav-link">Sign Up</a> -->
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+ 
 
     <!-- Main content start here -->
 
     <section>
-        <div class="container hero-section my-5 py-5">
-            <h1 class="fw-bold"><span class="  rounded-circle px-3 pt-3 " style="background-color: #ffe785;">Fi</span>nd
-                The Best <br><span style="color: #007bff;">Virtual Office</span> In India</h1>
+        <div class="container-fluid hero-section my-5 py-5">
+            <div class="container">
             <div class="row">
                 <div class="col-md-6 ">
+                    <h1 class="fw-bold"><span class="  rounded-circle px-3 pt-3 " style="background-color: #ffe785;">Fi</span>nd
+                        The Best <br><span style="color: #007bff;">Virtual Office</span> In India</h1>
                     <div class="locations">
                         <div class="location " onclick="locationClick('virtual-space-gurugram.html')"
                             style="background-image: url(resource/virtual-space-image/Gurugram.svg); background-size: 56px; background-repeat: no-repeat; background-position: center; ">
@@ -561,19 +148,7 @@
                 </div>
 
             </div>
-            <!-- link active karne ke liye isko script ko uncomment karenge -->
-            <!-- <script>
-                function locationClick(city) {
-                    if (city.startsWith('/')) {
-                        // Agar relative URL hai (e.g., /virtual-space/virtual-space-indore.html)
-                        window.location.href = city;
-                    } else {
-                        // Agar city ka naam hai, to usko ek URL me convert karenge
-                        window.location.href = "http://127.0.0.1:5500/virtual-office/" + city.toLowerCase();
-                    }
-                }
-
-            </script> -->
+            
             <div id="locationModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal()">&times;</span>
@@ -660,72 +235,10 @@
             </div>
 
             <!-- CSS for Modal -->
-            <style>
-                .modal {
-                    display: none;
-                    position: fixed;
-                    z-index: 1000;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .modal-content {
-                    background: white;
-                    padding: 20px;
-                    border-radius: 10px;
-                    width: 50%;
-                    text-align: center;
-                }
-
-                .close {
-                    position: absolute;
-                    right: 15px;
-                    top: 10px;
-                    font-size: 25px;
-                    cursor: pointer;
-                }
-
-                .modal-locations {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    justify-content: center;
-                }
-
-                .modal-locations .location {
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 50%;
-                    background-size: 48px;
-                    background-repeat: no-repeat;
-                    background-position: center;
-
-                    display: flex;
-                    /* align-items: flex-end; */
-                    justify-content: end;
-                    font-size: 10px;
-                    font-weight: bold;
-                    color: rgb(0, 0, 0);
-                    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
-                    padding-bottom: 5px;
-                }
-            </style>
+            
 
             <!-- JavaScript for Modal -->
-            <script>
-                function openModal() {
-                    document.getElementById('locationModal').style.display = 'flex';
-                }
-
-                function closeModal() {
-                    document.getElementById('locationModal').style.display = 'none';
-                }
-            </script>
+        </div>
 
     </section>
 
@@ -816,9 +329,7 @@
 
 
     <section>
-        <style>
-
-        </style>
+        
 
         <div class="container mt-4">
             <div class="row g-3">
@@ -926,9 +437,7 @@
             </div>
         </div>
 
-        <style>
-
-        </style>
+        
     </section>
 
 
@@ -1057,52 +566,46 @@
                                 <option value="option-3">Option 3</option>
                             </select>
                         </div>
-
+                    
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="fullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" name="user_name"
-                                        placeholder="Enter your full name" required>
+                                    <input type="text" class="form-control" id="fullName" name="user_name" placeholder="Enter your full name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="workEmail" class="form-label">Work email address</label>
-                                    <input type="email" class="form-control" id="workEmail" name="user_email"
-                                        placeholder="Enter your work email" required>
+                                    <input type="email" class="form-control" id="workEmail" name="user_email" placeholder="Enter your work email" required>
                                 </div>
                             </div>
                         </div>
-
+                    
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="number" class="form-label">Number</label>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">+62</span>
-                                    <input type="tel" class="form-control" name="phone" aria-label="Mobile number"
-                                        placeholder="Enter your phone number" required>
+                                    <input type="tel" class="form-control" name="phone" aria-label="Mobile number" placeholder="Enter your phone number" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="companyName" class="form-label">Company name</label>
-                                    <input type="text" class="form-control" id="companyName" name="company_name"
-                                        placeholder="Enter your company name" required>
+                                    <input type="text" class="form-control" id="companyName" name="company_name" placeholder="Enter your company name" required>
                                 </div>
                             </div>
                         </div>
-
+                    
                         <div class="mb-3">
                             <label for="idealWorkspace" class="form-label">Share with us your ideal workspace</label>
-                            <textarea class="form-control" id="idealWorkspace" name="ideal_workspace" rows="3"
-                                placeholder="Describe your ideal workspace" required></textarea>
+                            <textarea class="form-control" id="idealWorkspace" name="ideal_workspace" rows="3" placeholder="Describe your ideal workspace" required></textarea>
                         </div>
-
-                        <button type="submit" class="btn btn-lg w-100"
-                            style="background-color: #e3d7ba;">Submit</button>
+                    
+                        <button type="submit" class="btn btn-lg w-100" style="background-color: #e3d7ba;">Submit</button>
                     </form>
-
+                    
                 </div>
             </div>
         </div>
@@ -1498,12 +1001,7 @@
 
 
     <section>
-        <style>
-            .none-decoration p a {
-                text-decoration: none;
-                color: #333;
-            }
-        </style>
+        
         <div class="container py-5 none-decoration ">
             <h2>Coworking Spaces in India</h2>
             <p>
@@ -1671,32 +1169,10 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navbar = document.querySelector(".navbar");
-
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 50) {
-                    navbar.classList.add("scrolled");
-                } else {
-                    navbar.classList.remove("scrolled");
-                }
-            });
-        });
-    </script>
+    
 
 
-    <script>
-        let audio = document.getElementById("hoverSound");
-
-        document.querySelectorAll(".card").forEach(card => {
-            card.addEventListener("mouseenter", () => {
-                audio.currentTime = 0; // Audio restart karega
-                audio.play();
-            });
-        });
-
-    </script>
+    
 
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -1707,6 +1183,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/header.js"></script>
 </body>
 
 </html>

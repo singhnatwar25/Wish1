@@ -1,0 +1,337 @@
+/* Common Styles */
+body {
+  font-family: "raleway", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s ease-in-out;
+  font-family: "raleway";
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4a017 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #030303;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f1f1f1;
+  font-size: 13px;
+}
+
+.dropdown-header {
+  font-size: 0.7rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  margin-left: 0.5em;
+  border: solid transparent;
+  border-width: 0.3em 0.3em 0;
+  border-top-color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Styles */
+.CusImage {
+  height: 400px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: solid 0.5px #d4a017 !important;
+}
+
+.homeImage {
+  border-radius: 100px 12px 12px 12px;
+  object-fit: cover;
+}
+
+/* Workspace Styles */
+.workspace-card img {
+  border-radius: 15px;
+}
+
+.workspace-info {
+  border-radius: 15px;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.workspace-info h5 {
+  font-weight: bold;
+}
+
+.workspace-info p {
+  color: #6c757d;
+}
+
+.workspace-info .btn {
+  font-weight: bold;
+  color: #a77716;
+}
+
+.virtualImage {
+  border-radius: 0 60px 4px 4px;
+  object-fit: cover;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f7fbfc;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 16.5px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #606060;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s ease-in-out;
+  font-family: "raleway";
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4a017 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #030303;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f1f1f1;
+  font-size: 13px;
+}
+
+.dropdown-header {
+  font-size: 0.7rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s ease-in-out;
+  font-family: "raleway";
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4a017 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #030303;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f1f1f1;
+  font-size: 13px;
+}
+
+.dropdown-header {
+  font-size: 0.7rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  margin-left: 0.5em;
+  border: solid transparent;
+  border-width: 0.3em 0.3em 0;
+  border-top-color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styles */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: solid 0.5px #d4a017 !important;
+}
+
+/* Image Styles */
+.CusImage {
+  height: 400px;
+  object-fit: cover;
+}
+
+.homeImage {
+  border-radius: 100px 12px 12px 12px;
+  object-fit: cover;
+}
+
+.virtualImage {
+  border-radius: 0 60px 4px 4px;
+  object-fit: cover;
+}
+
+/* Workspace Styles */
+.workspace-card img {
+  border-radius: 15px;
+}
+
+.workspace-info {
+  border-radius: 15px;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.workspace-info h5 {
+  font-weight: bold;
+}
+
+.workspace-info p {
+  color: #6c757d;
+}
+
+.workspace-info .btn {
+  font-weight: bold;
+  color: #a77716;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f7fbfc;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 16.5px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #606060;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+}
