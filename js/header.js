@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="location.html" id="locationDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false"
-                  onclick="window.location.href = '/location.html';">Locations</a>
+                  onclick="window.location.href = './location.html';">Locations</a>
                 <ul class="dropdown-menu p-3" aria-labelledby="locationDropdown" style="min-width: 400px;">
 
                   <li><a class="dropdown-header">Popular Locations</a></li>
