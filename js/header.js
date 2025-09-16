@@ -23,30 +23,30 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="row">
                   <!-- Column 1 -->
                   <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/location/gurugram.html">Gurugram</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/bangalore.html">Bangalore</a></li>
-                    <li><a class="dropdown-item disabled" href="/location//mumbai.html">Mumbai</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/hyderabad.html">Hyderabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/pune.html">Pune</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/delhi.html">Delhi</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/noida.html">Noida</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/ahmedabad.html">Ahmedabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/indore.html">Indore</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/gurugram.html">Gurugram</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/bangalore.html">Bangalore</a></li>
+                    <li><a class="dropdown-item disabled" href="./location//mumbai.html">Mumbai</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/hyderabad.html">Hyderabad</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/pune.html">Pune</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/delhi.html">Delhi</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/noida.html">Noida</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/ahmedabad.html">Ahmedabad</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/indore.html">Indore</a></li>
                   </div>
 
                   <!-- Column 2 -->
                   <div class="col-md-6">
-                    <li><a class="dropdown-item" href="/location/jaipur.html">Jaipur</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/chennai.html">Chennai</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/kochi.html">Kochi</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/bhubaneswar.html">Bhubaneswar</a>
+                    <li><a class="dropdown-item" href="./location/jaipur.html">Jaipur</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/chennai.html">Chennai</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/kochi.html">Kochi</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/bhubaneswar.html">Bhubaneswar</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/location/coimbatore.html">Coimbatore</a>
+                    <li><a class="dropdown-item disabled" href="./location/coimbatore.html">Coimbatore</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/location/chandigarh.html">Chandigarh</a>
+                    <li><a class="dropdown-item disabled" href="./location/chandigarh.html">Chandigarh</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/location/goa.html">Goa</a></li>
-                    <li><a class="dropdown-item disabled" href="/location/kolkata.html">Kolkata</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/goa.html">Goa</a></li>
+                    <li><a class="dropdown-item disabled" href="./location/kolkata.html">Kolkata</a></li>
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="virtual-office.html" id="plansDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
-                onclick="window.location.href = '/virtual-office.html';">Virtual Office</a>
+                onclick="window.location.href = './virtual-office.html';">Virtual Office</a>
               <ul class="dropdown-menu p-3" aria-labelledby="plansDropdown" style="min-width: 400px;">
 
                 <li><a class="dropdown-header">Popular Locations</a></li>
@@ -107,30 +107,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row">
                   <!-- Column 1 -->
                   <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-gurugram.html">Gurugram</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-bangalore.html">Bangalore</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-mumbai.html">Mumbai</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-hyderabad.html">Hyderabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-pune.html">Pune</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-delhi.html">Delhi</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-noida.html">Noida</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-ahmedabad.html">Ahmedabad</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-indore.html">Indore</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-gurugram.html">Gurugram</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-bangalore.html">Bangalore</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-mumbai.html">Mumbai</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-hyderabad.html">Hyderabad</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-pune.html">Pune</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-delhi.html">Delhi</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-noida.html">Noida</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-ahmedabad.html">Ahmedabad</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-indore.html">Indore</a></li>
                   </div>
 
                   <!-- Column 2 -->
                   <div class="col-md-6">
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-chennai.html">Chennai</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-kochi.html">Kochi</a></li>
-                    <li><a class="dropdown-item " href="/virtual-office/virtual-space-jaipur.html">Jaipur</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-bhubaneswar.html">Bhubaneswar</a>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-chennai.html">Chennai</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-kochi.html">Kochi</a></li>
+                    <li><a class="dropdown-item " href="./virtual-office/virtual-space-jaipur.html">Jaipur</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-bhubaneswar.html">Bhubaneswar</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-coimbatore.html">Coimbatore</a>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-coimbatore.html">Coimbatore</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-chandigarh.html">Chandigarh</a>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-chandigarh.html">Chandigarh</a>
                     </li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-goa.html">Goa</a></li>
-                    <li><a class="dropdown-item disabled" href="/virtual-office/virtual-space-kolkata.html">Kolkata</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-goa.html">Goa</a></li>
+                    <li><a class="dropdown-item disabled" href="./virtual-office/virtual-space-kolkata.html">Kolkata</a></li>
                   </div>
                 </div>
 
@@ -145,10 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <a class="nav-link" href="../event.html">Events</a>
             </li>
             <!-- <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="./blog.html">Blog</a>
             </li>
             <li class="nav-item"> 
-              <a class="nav-link" href="gallery.html">Gallery</a>
+              <a class="nav-link" href="./gallery.html">Gallery</a>
             </li> -->
           </ul>
           <div class="d-flex">
