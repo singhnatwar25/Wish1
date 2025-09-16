@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <header id="navbar">
     <nav class="navbar navbar-expand-lg fixed-top box-shadow" >
       <div class="container">
-        <a class="navbar-brand font-monospace fs-4" href="/">WISH<span class="text-dark">COWORK</span></a>
+        <a class="navbar-brand font-monospace fs-4" href="./">WISH<span class="text-dark">COWORK</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
