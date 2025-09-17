@@ -1,106 +1,28 @@
 ---
 title: "Blog | WishCowork"
 ---
+
 <!doctype html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="title" content="Pricing | Coworking Office Space | Shared Office Space" />
-  <meta name="description"
-    content="Book the coworking office in Jaipur. Wishcoworker provides you luxurious office spaces to startups, freelancers, and entrepreneurial communities." />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="keywords"
-    content="Best coworking space in jaipur, Coworking space in jaipur, shared office space in jaipur, office space in jaipur, cowork in jaipur, coworking in jaipur">
+  <title>WishCowork | Blog</title>
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mingzat&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <!-- Styles.css -->
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQLSDC3YXZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-DQLSDC3YXZ');
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220104775-1">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-220104775-1');
-  </script>
-  <meta name="google-site-verification" content="T5B8UvxBtc7GEkG_jUYkKekm1UqDIy3owQ6x47OYVVQ" />
-  <title>WishCowork</title>
-
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-
-
-
 <body>
-
- 
-
-  <!-- Main content start here -->
   <main>
-
-    {% assign posts_list = site.posts %}
-
     <section>
       <div class="container mt-5 pt-3">
         <h1 class="fw-bold fs-1">Blogs <span class="fs-5">&#x25CF;</span></h1>
 
-        {% if posts_list.size > 0 %}
-        <div class="row">
-          {% assign hero = posts_list.first %}
-          <div class="col-md-7">
-            <a href="{{ hero.url }}" class="text-decoration-none text-dark">
-              <img src="{{ hero.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" alt="{{ hero.title }}" class="img-fluid rounded-4" style="height: 400px; width: 100%; object-fit: cover;">
-              <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">{{ hero.title }}</h2>
-              <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
-                <small>{{ hero.excerpt | strip_html | truncate: 140 }}</small>
-                <i class="fa-solid fa-arrow-up-right-dots"></i>
-              </p>
-            </a>
-          </div>
-          <div class="col-md-5 my-auto">
-            {% assign next_post = posts_list[1] %}
-            {% if next_post %}
-            <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">{{ next_post.title }}</h2>
-            <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
-              <small>{{ next_post.excerpt | strip_html | truncate: 120 }}</small>
-              <i class="fa-solid fa-arrow-up-right-dots"></i>
-            </p>
-            <a href="{{ next_post.url }}" class="card bg-dark text-white rounded-4 text-decoration-none">
-              <img src="{{ next_post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img rounded-4" alt="{{ next_post.title }}" style="height: 250px; object-fit: cover;">
-              <div class="card-img-overlay">
-                <h5 class="card-title">{{ next_post.title }}</h5>
-                <p class="card-text">{{ next_post.date | date: '%B %d, %Y' }}</p>
-              </div>
-            </a>
-            {% endif %}
-          </div>
-        </div>
-        {% endif %}
+        <div id="hero-section" class="row"></div>
       </div>
     </section>
 
@@ -115,7 +37,7 @@ title: "Blog | WishCowork"
             <p>WishCowork provides a modern, professional setting with everything you need to succeed!</p>
           </div>
           <div class="col-md-2 my-auto">
-            <a href="#" class="btn btn-dark rounded-3 fw-bold text-end">Talk to us <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#" class="btn btn-dark rounded-3 fw-bold">Talk to us <i class="fa-solid fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -124,122 +46,109 @@ title: "Blog | WishCowork"
     <section>
       <div class="container">
         <h4 class="fw-medium">Explore topic</h4>
-        <div class="row">
-          {% for post in posts_list offset:2 limit:6 %}
-          <div class="col-md-4">
-            <a href="{{ post.url }}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
-              <img src="{{ post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img-top" alt="{{ post.title }}" style="height: 220px; object-fit: cover;">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">{{ post.title }}</h6>
-                <p class="text-muted mt-0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
-                <p class="card-text fs-6 lh-1"><small>{{ post.excerpt | strip_html | truncate: 120 }}</small></p>
-                {% if post.category %}<span class="badge bg-light text-dark border rounded-4">{{ post.category }}</span>{% endif %}
-              </div>
-            </a>
-          </div>
-          {% endfor %}
-        </div>
+        <div id="topic-section" class="row"></div>
 
-        <div class="row my-5">
-          {% for post in posts_list offset:8 %}
-          <div class="col-md-4">
-            <a href="{{ post.url }}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
-              <img src="{{ post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img-top" alt="{{ post.title }}" style="height: 220px; object-fit: cover;">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">{{ post.title }}</h6>
-                <p class="text-muted mt-0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
-                <p class="card-text fs-6 lh-1"><small>{{ post.excerpt | strip_html | truncate: 120 }}</small></p>
-                {% if post.category %}<span class="badge bg-light text-dark border rounded-4">{{ post.category }}</span>{% endif %}
-              </div>
-            </a>
-          </div>
-          {% endfor %}
-        </div>
+        <div class="row my-5" id="more-posts"></div>
       </div>
     </section>
-
   </main>
-  <!--  Main content End here -->
 
-  <footer class="footer">
-    <div class="container-fluid " style="background-color: #ebf1f2;">
-      <div class="container py-4">
-        <div class="row  ">
-          <div class="col-md-6">
-            <div class="input-group">
-              <input type="email" class="form-control mx-2 rounded-2 border-0"
-                placeholder="Enter your email address for updates">
-              <button class="btn btn-dark rounded-2">SUBMIT</button>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Blog Script -->
+  <script>
+    const apiUrl = "YOUR_GOOGLE_APPS_SCRIPT_URL"; // यहां अपना Script URL डालना
+
+    async function loadBlogs() {
+      const res = await fetch(apiUrl);
+      const posts = await res.json();
+
+      if (!posts || posts.length === 0) {
+        document.getElementById("hero-section").innerHTML = "<p>No blogs found.</p>";
+        return;
+      }
+
+      // Hero section
+      const hero = posts[0];
+      let heroHTML = `
+        <div class="col-md-7">
+          <a href="post.html?id=${hero.ID}" class="text-decoration-none text-dark">
+            <img src="${hero.Image || '/resource/blog-images/Blog-GoWork-KITAS.jpg'}" 
+              alt="${hero.Title}" class="img-fluid rounded-4" style="height: 400px; width: 100%; object-fit: cover;">
+            <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">${hero.Title}</h2>
+            <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
+              <small>${hero.Content.substring(0, 140)}...</small>
+              <i class="fa-solid fa-arrow-up-right-dots"></i>
+            </p>
+          </a>
+        </div>
+      `;
+
+      if (posts[1]) {
+        const next = posts[1];
+        heroHTML += `
+        <div class="col-md-5 my-auto">
+          <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">${next.Title}</h2>
+          <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
+            <small>${next.Content.substring(0, 120)}...</small>
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+          </p>
+          <a href="post.html?id=${next.ID}" class="card bg-dark text-white rounded-4 text-decoration-none">
+            <img src="${next.Image || '/resource/blog-images/Blog-GoWork-KITAS.jpg'}" 
+              class="card-img rounded-4" alt="${next.Title}" style="height: 250px; object-fit: cover;">
+            <div class="card-img-overlay">
+              <h5 class="card-title">${next.Title}</h5>
+              <p class="card-text">${next.Date}</p>
             </div>
+          </a>
+        </div>
+        `;
+      }
+      document.getElementById("hero-section").innerHTML = heroHTML;
+
+      // Explore topic (next 6 posts)
+      let topicHTML = "";
+      posts.slice(2, 8).forEach(p => {
+        topicHTML += `
+          <div class="col-md-4">
+            <a href="post.html?id=${p.ID}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
+              <img src="${p.Image || '/resource/blog-images/Blog-GoWork-KITAS.jpg'}" 
+                class="card-img-top" alt="${p.Title}" style="height: 220px; object-fit: cover;">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">${p.Title}</h6>
+                <p class="text-muted mt-0"><small>${p.Date}</small></p>
+                <p class="card-text fs-6 lh-1"><small>${p.Content.substring(0, 120)}...</small></p>
+                ${p.Category ? `<span class="badge bg-light text-dark border rounded-4">${p.Category}</span>` : ""}
+              </div>
+            </a>
           </div>
-        </div>
-      </div>
-    </div>
+        `;
+      });
+      document.getElementById("topic-section").innerHTML = topicHTML;
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="list-unstyled">
-            <li><a href="location.html">LOCATIONS</a></li>
-            <li><a href="pricing.html">PLANS</a></li>
-            <li><a href="space.html">SPACES</a></li>
-            <li><a href="event.html">EVENTS</a></li>
-            <li><a href="furniture-rental.html">FURNITURE RENTAL</a></li>
-
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <ul class="list-unstyled">
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="news.html">NEWS</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-            <li><a href="marketing-partnership.html">MARKETING PARTNERSHIP</a></li>
-            <li><a href="career.html">CAREER</a></li>
-      
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <ul class="list-unstyled">
-            <li><a href="about-us.html">ABOUT US</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="review.html">WALL OF LOVE</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 text-md-start " style="font-size: 13px;">
-          <p class="mb-1 mb-3"><strong>OPENING HOURS</strong><br>Monday to Friday 9:00 AM - 6:00 PM</p>
-          <p class="mb-3" style="color: #b8892c;"><i class="fa-solid fa-phone"></i> <i
-              class="fa-brands fa-whatsapp"></i> +91-9555730319</p>
-          <div class="social-icons mb-3">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      // More posts
+      let moreHTML = "";
+      posts.slice(8).forEach(p => {
+        moreHTML += `
+          <div class="col-md-4">
+            <a href="post.html?id=${p.ID}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
+              <img src="${p.Image || '/resource/blog-images/Blog-GoWork-KITAS.jpg'}" 
+                class="card-img-top" alt="${p.Title}" style="height: 220px; object-fit: cover;">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">${p.Title}</h6>
+                <p class="text-muted mt-0"><small>${p.Date}</small></p>
+                <p class="card-text fs-6 lh-1"><small>${p.Content.substring(0, 120)}...</small></p>
+                ${p.Category ? `<span class="badge bg-light text-dark border rounded-4">${p.Category}</span>` : ""}
+              </div>
+            </a>
           </div>
-          <p class="mb-0">&copy; Copyright 2024 Wishcowork Coworking and Office Space.</p>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col text-center">
-        </div>
-      </div>
-    </div>
-  </footer>
+        `;
+      });
+      document.getElementById("more-posts").innerHTML = moreHTML;
+    }
 
-  
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-
-  <script src="js/main.js"></script>
-  <script src="js/header.js"></script>
-
+    loadBlogs();
+  </script>
 </body>
-
 </html>

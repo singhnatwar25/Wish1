@@ -1,0 +1,53 @@
+---
+layout: default
+title: Blog Post
+---
+
+<div class="container py-5">
+  <div id="post-content" class="row justify-content-center">
+    <div class="col-lg-8">
+      <div id="loading">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const apiUrl = "YOUR_GOOGLE_APPS_SCRIPT_URL";
+
+function getQueryParam(param) {
+  let urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+async function loadPost() {
+  const id = getQueryParam("id");
+  if (!id) {
+    document.getElementById("post-content").innerHTML = "<p>No post found.</p>";
+    return;
+  }
+
+  const res = await fetch(apiUrl + "?id=" + id);
+  const post = await res.json();
+
+  if (!post || !post.Title) {
+    document.getElementById("post-content").innerHTML = "<p>Post not found.</p>";
+    return;
+  }
+
+  let html = `
+    <div class="card shadow-sm">
+      ${post.Image ? `<img src="${post.Image}" class="card-img-top" alt="${post.Title}">` : ""}
+      <div class="card-body">
+        <h1 class="card-title">${post.Title}</h1>
+        <p class="text-muted">${post.Date} | <span class="badge bg-secondary">${post.Category}</span></p>
+        <p class="card-text">${post.Content}</p>
+        <a href="blog.html" class="btn btn-outline-primary mt-3">← Back to Blog</a>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("post-content").innerHTML = html;
+}
+
+loadPost();
+</script>

@@ -1,0 +1,7 @@
+title: "Wish Cowork Blog"
+description: "A premium coworking blog powered by Jekyll + Google Sheets"
+baseurl: "" 
+url: "https://yourusername.github.io"
+
+markdown: kramdown
+theme: minima
