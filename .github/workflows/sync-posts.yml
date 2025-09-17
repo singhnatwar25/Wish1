@@ -1,0 +1,45 @@
+name: Sync Blog Posts from Google Sheets
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *' # daily at 03:00 UTC
+
+jobs:
+  sync-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate CSV URL
+        run: |
+          if [ -z "${SHEET_CSV_URL}" ]; then
+            echo "Repository variable SHEET_CSV_URL is not set. Set it to your Google Sheet's published CSV URL." >&2
+            exit 1
+          fi
+
+      - name: Download CSV from Google Sheets
+        run: |
+          curl -L "$SHEET_CSV_URL" -o posts.csv
+          test -s posts.csv || (echo "Downloaded CSV is empty" && exit 1)
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate Markdown posts from CSV
+        run: |
+          python scripts/csv_to_posts.py posts.csv
+
+      - name: Auto Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync blog posts from Google Sheets"
+          file_pattern: |
+            _posts/*.md

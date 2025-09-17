@@ -1,3 +1,6 @@
+---
+title: "Blog | WishCowork"
+---
 <!doctype html>
 <html lang="en">
 
@@ -60,159 +63,97 @@
   <!-- Main content start here -->
   <main>
 
+    {% assign posts_list = site.posts %}
+
     <section>
       <div class="container mt-5 pt-3">
-        <h1 class="fw-bold fs-1">Blogs <span class="fs-5">&#x25CF;</span> </h1>
-        <div class="row ">
-          <div class="col-md-7 ">
-            <img src="resource/price-images/event-space.jpg" alt="" class="img-fluid rounded-4" style="height: 400px;">
-            <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0 ">Hello there More Lorem
-              this is Natwar hi. </h2>
-            <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal"><small>Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Id veritatis numquam, praesentium error et reiciendis
-                similique blanditiis magni tempore eos?</small> <i class="fa-solid fa-arrow-up-right-dots"></i></p>
+        <h1 class="fw-bold fs-1">Blogs <span class="fs-5">&#x25CF;</span></h1>
+
+        {% if posts_list.size > 0 %}
+        <div class="row">
+          {% assign hero = posts_list.first %}
+          <div class="col-md-7">
+            <a href="{{ hero.url }}" class="text-decoration-none text-dark">
+              <img src="{{ hero.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" alt="{{ hero.title }}" class="img-fluid rounded-4" style="height: 400px; width: 100%; object-fit: cover;">
+              <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">{{ hero.title }}</h2>
+              <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
+                <small>{{ hero.excerpt | strip_html | truncate: 140 }}</small>
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+              </p>
+            </a>
           </div>
-          <div class="col-md-5   my-auto">
-            <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0 ">Hello there More Lorem
-              this </h2>
-            <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal"><small>Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Id veritatis numquam, praesentium error et reiciendis
-                similique blanditiis magni tempore eos?</small> <i class="fa-solid fa-arrow-up-right-dots"></i></p>
-            <div class="card bg-dark text-white rounded-4 ">
-              <img src="resource/price-images/asdhf.jpg" class="card-img rounded-4" alt="...">
-              <div class="card-img-overlay ">
-                <h5 class="card-title">Dubai Coworking Space</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text">Published: 23.4.2025 <i class="fa-solid fa-location-arrow"></i></p>
+          <div class="col-md-5 my-auto">
+            {% assign next_post = posts_list[1] %}
+            {% if next_post %}
+            <h2 class="fw-semibold text-center pt-2 bg-body-secondary rounded-top-4 mt-2 m-0">{{ next_post.title }}</h2>
+            <p class="bg-body-secondary m-0 pb-2 rounded-bottom-4 px-2 mb-2 text-muted fw-normal">
+              <small>{{ next_post.excerpt | strip_html | truncate: 120 }}</small>
+              <i class="fa-solid fa-arrow-up-right-dots"></i>
+            </p>
+            <a href="{{ next_post.url }}" class="card bg-dark text-white rounded-4 text-decoration-none">
+              <img src="{{ next_post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img rounded-4" alt="{{ next_post.title }}" style="height: 250px; object-fit: cover;">
+              <div class="card-img-overlay">
+                <h5 class="card-title">{{ next_post.title }}</h5>
+                <p class="card-text">{{ next_post.date | date: '%B %d, %Y' }}</p>
               </div>
-            </div>
+            </a>
+            {% endif %}
           </div>
         </div>
+        {% endif %}
       </div>
     </section>
 
     <section>
       <div class="container my-5">
-        <div class="row  border-2 bg-info-subtle rounded-5 border-dark py-2">
-          <div class="col-md-2 ">
-            <img src="resource/blog-images/search-something.webp" alt="" class="img-fluid" width="100">
+        <div class="row border-2 bg-info-subtle rounded-5 border-dark py-2">
+          <div class="col-md-2">
+            <img src="/resource/blog-images/search-something.webp" alt="" class="img-fluid" width="100">
           </div>
           <div class="col-md-8 py-3">
             <h5 class="text-info-emphasis fw-bold">Looking for a more inspiring work environment?</h5>
             <p>WishCowork provides a modern, professional setting with everything you need to succeed!</p>
           </div>
           <div class="col-md-2 my-auto">
-            <a href="#" class="btn btn-dark rounded-3 fw-bold text-end">Talk to us <i
-                class="fa-solid fa-chevron-right"></i></a>
+            <a href="#" class="btn btn-dark rounded-3 fw-bold text-end">Talk to us <i class="fa-solid fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-
     <section>
       <div class="container">
         <h4 class="fw-medium">Explore topic</h4>
         <div class="row">
+          {% for post in posts_list offset:2 limit:6 %}
           <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
+            <a href="{{ post.url }}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
+              <img src="{{ post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img-top" alt="{{ post.title }}" style="height: 220px; object-fit: cover;">
               <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
+                <h6 class="card-title fw-bold">{{ post.title }}</h6>
+                <p class="text-muted mt-0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
+                <p class="card-text fs-6 lh-1"><small>{{ post.excerpt | strip_html | truncate: 120 }}</small></p>
+                {% if post.category %}<span class="badge bg-light text-dark border rounded-4">{{ post.category }}</span>{% endif %}
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
+
         <div class="row my-5">
+          {% for post in posts_list offset:8 %}
           <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
+            <a href="{{ post.url }}" class="card shadow-sm rounded overflow-hidden text-decoration-none text-dark">
+              <img src="{{ post.image | default: '/resource/blog-images/Blog-GoWork-KITAS.jpg' }}" class="card-img-top" alt="{{ post.title }}" style="height: 220px; object-fit: cover;">
               <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
+                <h6 class="card-title fw-bold">{{ post.title }}</h6>
+                <p class="text-muted mt-0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
+                <p class="card-text fs-6 lh-1"><small>{{ post.excerpt | strip_html | truncate: 120 }}</small></p>
+                {% if post.category %}<span class="badge bg-light text-dark border rounded-4">{{ post.category }}</span>{% endif %}
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm rounded overflow-hidden">
-              <img src="resource/blog-images/Blog-GoWork-KITAS.jpg" class="card-img-top" alt="Virtual Office">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Makin Diminati di Tahun 2025, Simak Tips Pilih Sewa Virtual Office yang
-                  Tepat!</h6>
-                <p class="text-muted mt-0"> <small>November 13, 2024</small></p>
-                <p class="card-text fs-6 lh-1"> <small>
-                    Kantor virtual (virtual office) telah menjadi solusi populer bagi banyak bisnis, terutama setelah
-                    pa...
-                  </small>
-                </p>
-                <span class="badge bg-light text-dark border rounded-4">Virtual office</span>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
