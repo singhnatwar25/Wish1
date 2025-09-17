@@ -193,9 +193,7 @@ body {
 .blog-card:hover {
   transform: translateY(-5px);
 }
-    background-color: #f7fbfc;
-
-  }
+ 
 
   .footer a {
     color: black;
